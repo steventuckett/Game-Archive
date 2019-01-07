@@ -1,0 +1,122 @@
+h1 {
+    color: black;
+    font-family: "Euclid Fraktur", "Old English Text MT", fantasy, serif;
+    font-size: 3.5em;
+    text-decoration: underline;
+}
+
+p {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+}
+
+ul {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+}
+
+body {
+    background: url("images/Mario-Background-nintendo-26503062-1680-1050.jpg") no-repeat center fixed;
+    background-color: white;
+    background-size: cover;
+}
+
+@media screen and (max-height: 450 px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    .cancelbtn, .signupbtn {width: 100%;}
+}
+
+* {box-sizing: border-box}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #acabab;
+}
+  
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #f8f3c4;
+    outline: none;
+}
+  
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 14px 25%;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 1.2;
+}
+
+button:hover {
+    opacity:1;
+}
+
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+  
+.cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+}
+  
+.container {
+    padding: 16px;
+}
+  
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50px;
+    top: 0;
+    width: 75%;
+    height: 100%;
+    background: url("images/Mario-Background-nintendo-26503062-1680-1050.jpg") no-repeat center fixed;
+    background-size: cover;
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+}
+  
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+  
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+  
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+  
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

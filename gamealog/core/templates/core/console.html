@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Console List</title>
+</head>
+<body>
+    <h1>Consoles</h1>
+    {% if latest_console_list %}
+    <ul> 
+        {% for console in latest_console_list %}
+            <li><a href="{% url 'game' console.id %}">{{ console.name }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No consoles are available.</p>
+    {% endif %}
+
+    <p><a href="{% url 'logout' %}">Logout</a></p>
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'core/style.css' %}">
+    
+</body>
+</html>

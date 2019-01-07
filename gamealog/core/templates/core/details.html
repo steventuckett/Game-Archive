@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game List</title>
+</head>
+<body>
+
+   <h1>{{ game.title }}</h1>
+    <ul>
+        <li>Category: {{ game.category }}</li>
+        <li>Beaten: {{ game.beat }}</li>
+        <li>Completed: {{ game.complete }}</li>
+        <li>Start Date: {{ game.start_date }}</li>
+        <li>Completion Date: {{ game.completion_date }}</li>
+        <li>Console: {{ game.console }}</li>
+    </ul>
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'core/detailstyle.css' %}">
+
+    <div class="sidenav">
+            <a href="http://127.0.0.1:8000/accounts/consoles/">Consoles</a>
+            <a href="http://127.0.0.1:8000/home/">Exit</a>
+    </div>
+
+</body>
+</html>

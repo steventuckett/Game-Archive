@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game List</title>
+</head>
+<body>
+
+    <h1>Games
+        {{ game.title }}
+    
+    </h1>
+    <ul>
+        {% for game in console.game_set.all %}
+            <li><a href="{% url 'detail' game.id %}">{{ game.title }}</a></li>          
+        {% endfor %}
+
+    </ul>
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'core/gamestyle.css' %}">
+
+    <div class="sidenav">
+            <a href="http://127.0.0.1:8000/accounts/consoles/">Consoles</a>
+            <a href="http://127.0.0.1:8000/home/">Exit</a>
+    </div>
+
+</body>
+</html>
+

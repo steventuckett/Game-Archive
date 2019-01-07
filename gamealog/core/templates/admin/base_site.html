@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    {% extends "admin/base.html" %}
+
+    {% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+    {% block branding %}
+        <h1 id="site-name"><a href="{% url 'admin:index' %}">Video Game Catalog</a></h1>
+    {% endblock %}
+
+    {% block nav-global %}{% endblock %}
+
+</body>
+</html>
+
